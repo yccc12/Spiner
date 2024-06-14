@@ -13,8 +13,15 @@ Go to the code directory, e.g. `.../Spiner/`, in Anaconda Prompt.
 Install keras-retinanet under the Spiner directory by running `pip install . --user`.  
 Run `python setup.py build_ext --inplace` to compile Cython code.
 
-## Training and testing
-Please refer to [fizyr/keras-retinanet](https://github.com/fizyr/keras-retinanet?tab=readme-ov-file) for more details, which includes information about how to train the model on a custom dataset and the annotation format of a CSV dataset. 
+## RetianNet training and testing
+Please refer to [fizyr/keras-retinanet](https://github.com/fizyr/keras-retinanet) for more details, which includes information about how to train the model on a custom dataset and the annotation format of a custom CSV dataset. 
+
+For training on a custom CSV dataset:
+```shell
+# Running directly from the repository in Anaconda Prompt
+python ./keras_retinanet/bin/train.py csv /path/to/csv/file/containing/annotations/training /path/to/csv/file/containing/classes --val-annotations /path/to/csv/file/containing/annotations/validation
+```
+Check `./keras_retinanet/bin/train.py` for more details about hyperparameters such as initial weights, learning rate, batch size, etc. 
 
 ## Cell detection
 Follow `inferenceStitch.py`, an automated cell detection and stitching pipeline.  
@@ -40,12 +47,11 @@ Software: [TeraStitcher](https://abria.github.io/TeraStitcher/)
      - List of predictions (.csv) per tile *(from **Cell detection**)*.  
      - XML descriptor (.xml) containing tile positions *(from **Stitching**)*.  
  - Output:  
-     - List of stitched cell centroids (.csv).
-  
-## Postprocessing and analysis 
+     - List of stitched cell centroids (.csv).  
 
 # Contact
 ycai23@ncsu.edu; rene.cai@unc.edu
 
 # Reference
-- https://github.com/fizyr/keras-retinanet  
+- https://github.com/fizyr/keras-retinanet
+- Bria, Alessandro, and Giulio Iannello. "TeraStitcher-a tool for fast automatic 3D-stitching of teravoxel-sized microscopy images." *BMC bioinformatics* 13.1 (2012): 1-15.  
