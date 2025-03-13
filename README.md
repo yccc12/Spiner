@@ -2,7 +2,10 @@
 Designed for automated detection of spiral ganglion neurons in 3D image datasets of cleared cochleae.
 [fizyr/keras-retinanet](https://github.com/fizyr/keras-retinanet) (Python) is adopted for cell detection.  
 
-## Installation with Anaconda (Windows)
+## Build a web interface on your own
+[Source codes](https://github.com/reubenrosenNCSU/cellannotation) for building a web interface which allows users to test, annotate, fine-tune, and adapt the pre-trained SGN object detection model.
+
+## Local installation with Anaconda (Windows)
 Download this repository.  
 *Check [here](https://docs.anaconda.com/anaconda/install/index.html) for Anaconda documentation.*  
 Open Anaconda Prompt and create an virtual environment - the package versions below are not mandontary but should work.  
